@@ -1,0 +1,592 @@
+/* ==================================== */
+/* 1. VARIABLES ET FONDAMENTAUX (RESET) */
+/* ==================================== */
+
+:root {
+  --couleur-primaire: #222; /* Texte principal */
+  --couleur-secondaire: #666; /* Sous-texte */
+  --couleur-fond: #fff; /* Fond principal */
+  --couleur-fond-section: #f8f8f8; /* Fond sections alternées */
+  --couleur-accent: #007bff; /* Bleu action/focus */
+  --couleur-accent-hover: #0056b3; /* Bleu survol */
+  --couleur-separateur: #eee; /* Lignes */
+  --couleur-tag-bg: #1a1a1a; /* Fond des tags compétences */
+  --font-principale: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif; /* Font stack plus moderne */
+}
+
+/* Reset de base */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Défilement fluide */
+}
+
+body {
+  font-family: var(--font-principale);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--couleur-fond);
+  color: var(--couleur-primaire);
+  transition: background-color 0.3s;
+}
+
+/* Accessibilité */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 9999;
+  padding: 1em;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 0;
+  top: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--couleur-primaire);
+}
+
+.list-unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--couleur-accent);
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--couleur-primaire);
+}
+
+/* ==================================== */
+/* 2. UI KIT (BOUTONS) */
+/* ==================================== */
+
+/* Style unifié pour tous les boutons (btn-primary, download, cv) */
+.btn-primary,
+.download-button,
+.cv_button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(
+    135deg,
+    var(--couleur-accent) 0%,
+    var(--couleur-accent-hover) 100%
+  );
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.12);
+  transition: all 0.2s ease;
+  text-decoration: none; /* Pour les liens stylisés en boutons */
+}
+
+.btn-primary:hover,
+.download-button:hover,
+.cv_button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.18);
+  background: linear-gradient(
+    135deg,
+    var(--couleur-accent-hover) 0%,
+    var(--couleur-accent) 100%
+  );
+  color: white;
+}
+
+.btn-primary:active,
+.download-button:active,
+.cv_button:active {
+  transform: translateY(-1px);
+}
+
+/* ==================================== */
+/* 3. HEADER ET NAVIGATION */
+/* ==================================== */
+
+.header {
+  background-color: var(--couleur-fond);
+  border-bottom: 1px solid var(--couleur-separateur);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Légère ombre pour détacher le header */
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: var(--couleur-primaire);
+}
+
+.navbar .menu li {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.navbar .menu a {
+  color: var(--couleur-secondaire);
+  font-size: 0.95em;
+  padding: 8px 10px;
+  border-bottom: 2px solid transparent;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.navbar .menu a:hover,
+.navbar .menu a.active {
+  color: var(--couleur-accent);
+  border-bottom: 2px solid var(--couleur-accent);
+}
+
+/* Social Icons */
+.socials li {
+  display: inline-block;
+  margin-left: 10px;
+}
+.socials svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+.socials a {
+  color: var(--couleur-secondaire);
+}
+.socials a:hover {
+  color: var(--couleur-accent);
+}
+
+/* ==================================== */
+/* 4. STRUCTURE DES SECTIONS */
+/* ==================================== */
+
+section {
+  padding: 80px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-header p {
+  color: var(--couleur-secondaire);
+  font-size: 1.1em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  /* Sur grand écran : 2 colonnes égales. Sur mobile : 1 colonne (automatique) */
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 40px;
+}
+
+h3 {
+  font-size: 1.4em;
+  margin-top: 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--couleur-separateur);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* ==================================== */
+/* 5. STYLES SPÉCIFIQUES */
+/* ==================================== */
+
+/* ACCUEIL */
+#accueil {
+  padding: 150px 0;
+  text-align: center;
+  background-color: var(--couleur-fond-section);
+}
+
+.accueil-etudiant {
+  display: block;
+  color: var(--couleur-accent);
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.1em;
+}
+
+.title {
+  font-size: 3.5em;
+  margin: 10px 0 20px;
+}
+
+.accueil-univ {
+  font-size: 1.2em;
+  color: var(--couleur-secondaire);
+}
+
+/* À PROPOS */
+#a-propos {
+  /* Changé de #à-propos pour sécurité encodage */
+  padding-top: 80px;
+}
+
+#a-propos .grid {
+  grid-template-columns: 1fr; /* Stack vertical par défaut */
+}
+
+@media (min-width: 768px) {
+  #a-propos .grid {
+    grid-template-columns: 1fr; /* Ajuster si tu veux 2 colonnes plus tard */
+  }
+}
+
+.à-propos-column h3 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.card-item {
+  margin-bottom: 25px;
+}
+
+.experience-title {
+  color: var(--couleur-accent);
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* COMPÉTENCES */
+/* Correction: Utilisation des variables définies dans :root */
+.skills-mini {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.skill-tag {
+  background: var(--couleur-tag-bg);
+  color: #ccc; /* Couleur texte par défaut dans le tag sombre */
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  border: 1px solid #333;
+  transition: all 0.3s;
+}
+
+.skill-tag:hover {
+  background: var(--couleur-accent);
+  color: #fff;
+  border-color: var(--couleur-accent);
+  transform: translateY(-3px);
+}
+
+.skills-bars {
+  margin-top: 30px;
+  max-width: 100%;
+}
+
+.skill-item {
+  margin-bottom: 20px;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: var(--couleur-secondaire);
+  font-weight: 500;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0; /* Plus clair que le noir pour le fond vide */
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: var(--couleur-accent);
+  border-radius: 4px;
+  width: 0; /* Sera animé par JS */
+  transition: width 1.5s ease-in-out;
+}
+
+/* CONTACT */
+#contact .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre horizontalement le header et le formulaire */
+  justify-content: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 600px; /* Largeur maximale pour ne pas être trop large sur PC */
+  margin: 0 auto; /* Centre le bloc si Flexbox n'est pas utilisé */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form > div {
+  width: 100%; /* Garantit que les champs prennent toute la largeur du formulaire */
+  text-align: left; /* Aligne les labels à gauche à l'intérieur du bloc centré */
+}
+
+.form input[type="email"],
+.form textarea,
+.form input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1em;
+  font-family: inherit;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--couleur-primaire);
+  font-weight: 600;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: var(--couleur-accent);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  outline: none;
+}
+
+.form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.form input[type="submit"] {
+  /* Hérite du style .btn-primary défini plus haut si la classe est ajoutée, 
+     sinon voici un style spécifique : */
+  background-color: var(--couleur-accent);
+  color: #fff;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.form input[type="submit"]:hover {
+  background-color: var(--couleur-accent-hover);
+}
+
+/* ==================================== */
+/* 6. MODAL (CV PREVIEW) */
+/* ==================================== */
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Un peu plus sombre */
+  backdrop-filter: blur(5px);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 800px; /* Plus large pour le PDF */
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease;
+  border-top: 5px solid var(--couleur-accent);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #f0f0f0;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--couleur-secondaire);
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  color: #fff;
+  background: #dc3545; /* Rouge pour fermer */
+  transform: rotate(90deg);
+}
+
+.modal-body h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.pdf-wrap {
+  width: 100%;
+  height: 60vh;
+  background: #f4f4f4;
+  margin: 20px 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modal-pdf {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* ==================================== */
+/* 7. FOOTER ET RESPONSIVE */
+/* ==================================== */
+
+footer {
+  background-color: var(--couleur-primaire);
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+footer .grid {
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 20px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+footer .socials a {
+  color: #fff;
+}
+footer .socials a:hover {
+  color: var(--couleur-accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar {
+    margin-top: 15px;
+  }
+  .navbar .menu li {
+    margin: 0 8px;
+  }
+
+  .title {
+    font-size: 2.2em;
+  }
+
+  /* Footer devient une colonne */
+  footer .grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+}
