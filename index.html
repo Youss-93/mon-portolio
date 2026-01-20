@@ -1,217 +1,396 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Youssouf Tape | Étudiant en BTS SIO</title>
-    <meta name="description" content="Portfolio de Youssouf Tape - Étudiant en BTS SIO" />
+    <title>Youssouf Tape | Portfolio BTS SIO</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
     <script src="./script.js" defer></script>
-</head>
-
-<body>
-    <a class="skip-link" href="#main">Aller au contenu</a>
-
+  </head>
+  <body>
     <header class="header">
-        <div class="container">
-            <div class="logo">Youssouf Tape</div>
-            <nav class="navbar">
-                <ul class="menu list-unstyled">
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#a-propos">A propos</a></li>
-                    <li><a href="#compétences">Compétences</a></li>
-                    <li><a href="#projets">Projets</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="right">
-                <ul class="socials list-unstyled">
-                    <li>
-                        <a href="https://www.linkedin.com/in/youssouf-tape-8823072a5/" target="_blank" aria-label="LinkedIn">
-                            <svg viewBox="0 0 448 512" width="20">
-                                <path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container nav-flex">
+        <div class="logo">Youssouf Tape</div>
+        <nav class="navbar">
+          <ul class="menu">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#a-propos">À propos</a></li>
+            <li><a href="#compétences">Compétences</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#veille">Veille</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#examens">Docs</a></li>
+          </ul>
+        </nav>
+        <div class="socials">
+          <a href="https://github.com/Youss-93" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/youssouf-tape-8823072a5/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
         </div>
+      </div>
     </header>
 
-    <main id="main">
-        <section id="accueil">
-            <div class="container">
-                <div class="accueil-left">
-                    <span class="accueil-etudiant">Étudiant en BTS SIO au lycée Turgot</span>
-                    <h1 class="title">Bonjour, je suis Youssouf Tape</h1>
-                    <p class="accueil-univ">Futur administrateur réseau & développeur.</p>
-                    <div style="margin-top: 30px">
-                        <a href="#contact" class="btn-primary">Me contacter</a>
-                    </div>
-                </div>
+    <main>
+      <section id="accueil" class="hero">
+        <div class="container">
+          <span class="badge">Étudiant en BTS SIO SLAM</span>
+          <h1>Bonjour, je suis <span class="highlight">Youssouf Tape</span></h1>
+          <p>Bienvenue sur mon <strong>Portfolio</strong>.</p>
+          <div class="hero-btns">
+            <a href="#contact" class="btn-primary">Me contacter</a>
+            <a href="#projets" class="btn-secondary">Voir mes projets</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+      <section id="a-propos" class="section-padding">
+        <div class="container">
+          <h2 class="section-title">Mon Parcours</h2>
+          <div class="grid-timeline">
+            <div class="timeline-col">
+              <h3>
+                <i class="fa-solid fa-briefcase"></i> Expériences
+                Professionnelles
+              </h3>
+              <article class="card-item">
+                <span class="date">DÉC 2025 - JANV 2026</span>
+                <h4>SYSLEARN (Stage SIO 2)</h4>
+                <p>
+                  Agrégateur de flux RSS, API MongoDB/Mongoose et sécurisation
+                  des données (Sanitization).
+                </p>
+              </article>
+              <article class="card-item">
+                <span class="date">MAI 2025 - JUIL 2025</span>
+                <h4>Mairie d'Aubervilliers (Stage SIO 1)</h4>
+                <p>
+                  Projet Routeur 5G, diagnostic VLAN et administration système
+                  Active Directory.
+                </p>
+              </article>
             </div>
-        </section>
-
-        <section id="a-propos">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">À Propos</h2>
-                    <p>Découvrez mon parcours académique et mes premières expériences dans le monde de l'informatique.</p>
-                </div>
-
-                <div class="grid">
-                    <div class="à-propos-column">
-                        <h3 class="Experience">🎓 FORMATION ACADÉMIQUE</h3>
-                        <article class="card-item">
-                            <div class="card-date">2024 - 2026</div>
-                            <h3>BTS SIO (Option SLAM)</h3>
-                            <p class="card-subtitle">Lycée Turgot, Paris 3ème</p>
-                            <p>Services Informatiques aux Organisations. Spécialisation en Solutions Logicielles et Applications Métiers.</p>
-                        </article>
-                        <article class="card-item">
-                            <div class="card-date">2023 - 2024</div>
-                            <h3>BUT Réseaux & Télécoms</h3>
-                            <p class="card-subtitle">IUT de Villetaneuse</p>
-                            <p>Première année axée sur l'administration système et les infrastructures réseaux.</p>
-                        </article>
-                        <article class="card-item">
-                            <div class="card-date">2022 - 2023</div>
-                            <h3>Bac STI2D (Option SIN)</h3>
-                            <p class="card-subtitle">Lycée Le Corbusier, Aubervilliers</p>
-                            <p>Sciences et Technologies de l'Industrie. Option Systèmes d'Information et Numérique.</p>
-                        </article>
-                    </div>
-
-                    <div class="à-propos-column">
-                        <h3 class="Experience">💼 EXPÉRIENCE PROFESSIONNELLE</h3>
-                        <article class="card-item">
-                            <div class="card-date">MAI 2025 - JUIL 2025</div>
-                            <h3>Mairie d'Aubervilliers</h3>
-                            <p class="card-subtitle">Stagiaire Support & Réseau</p>
-                            <ul style="padding-left: 20px; color: var(--couleur-secondaire); font-size: 0.9em;">
-                                <li>Support technique et maintenance du parc informatique.</li>
-                                <li>Installation de switchs et interventions sur site.</li>
-                                <li>Projet réseau dédié pour les écoles primaires.</li>
-                            </ul>
-                        </article>
-                        <article class="card-item">
-                            <div class="card-date">2019 - 2020</div>
-                            <h3>Oralia (Paris 9ème)</h3>
-                            <p class="card-subtitle">Stagiaire Administration</p>
-                            <p>Gestion de bases de données et comptabilité de copropriété (loyers, taxes, factures).</p>
-                        </article>
-                    </div>
-                </div>
+            <div class="timeline-col">
+              <h3><i class="fa-solid fa-graduation-cap"></i> Formation</h3>
+              <article class="card-item">
+                <span class="date">2024 - 2026</span>
+                <h4>BTS SIO Option SLAM</h4>
+                <p class="card-subtitle">Lycée Turgot, Paris 3ème</p>
+                <p>
+                  Services Informatiques aux Organisations. Spécialisation en
+                  Solutions Logicielles et Applications Métiers.
+                </p>
+              </article>
+              <article class="card-item">
+                <span class="date">2023 - 2024</span>
+                <h4>BUT Réseaux & Télécoms</h4>
+                <p class="card-subtitle">IUT de Villetaneuse</p>
+                <p>
+                  Première année axée sur l'administration système et les
+                  infrastructures réseaux.
+                </p>
+              </article>
+              <article class="card-item">
+                <span class="date">2022 - 2023</span>
+                <h4>Bac STI2D (Option SIN)</h4>
+                <p class="card-subtitle">Lycée Le Corbusier, Aubervilliers</p>
+                <p>Systèmes d'Information et Numérique.</p>
+              </article>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section id="compétences">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Compétences</h2>
-                    <p>Un profil polyvalent entre développement (SLAM) et infrastructure réseau.</p>
-                </div>
-
-                <div class="skills-mini">
-                    <span class="skill-tag">PHP / Java / Python</span>
-                    <span class="skill-tag">NodeJS / React / Angular CLI</span>
-                    <span class="skill-tag">TypeScript / TailwindCSS</span>
-                    <span class="skill-tag">MySQL / PostgreSQL</span>
-                    <span class="skill-tag">UML / Merise</span>
-                    <span class="skill-tag">Kali Linux / Debian</span>
-                    <span class="skill-tag">Méthode Ebios / OWASP</span>
-                </div>
-
-                <div class="skills-bars">
-                    <div class="skill-item">
-                        <div class="skill-info"><span>Développement Logiciel (BTS SIO SLAM)</span><span>60%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-level="60%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info"><span>Cybersécurité & Réseau</span><span>45%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-level="45%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info"><span>Anglais (Niveau B1)</span><span>65%</span></div>
-                        <div class="skill-bar"><div class="skill-progress" data-level="65%"></div></div>
-                    </div>
-                </div>
-
-                <div class="cv-container" style="text-align: center; margin-top: 40px;">
-                    <button class="cv_button" onclick="openModal('cv')">📜 Voir mon CV complet</button>
-                </div>
+      <section id="compétences" class="section-padding bg-light">
+        <div class="container">
+          <h2 class="section-title">Compétences Techniques</h2>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <i class="devicon-php-plain colored"></i><span>PHP</span>
             </div>
-        </section>
-
-        <section id="projets" style="background-color: var(--couleur-fond-section);">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Veille & Projets</h2>
-                </div>
-                <div class="grid">
-                    <article class="card-item project-card">
-                        <div class="card-icon">🥊</div>
-                        <h3>Site Web : Muay Thaï</h3>
-                        <p class="card-subtitle">Projet d'Intégration Web</p>
-                        <p>Conception d'un site thématique complet en <strong>HTML5 et CSS3</strong>.</p>
-                        <div style="margin-top:auto; display: flex; gap: 10px; justify-content: center; width: 100%;">
-                            <a href="https://youss-93.github.io/ap-site-web/" target="_blank" class="btn-primary" style="font-size: 0.8em; flex: 1;">Voir le site</a>
-                            <a href="https://github.com/Youss-93/ap-site-web" target="_blank" class="btn-primary" style="font-size: 0.8em; background: #333; flex: 1;">GitHub</a>
-                        </div>
-                    </article>
-
-                    <article class="card-item project-card">
-                        <div class="card-icon">📡</div>
-                        <h3>Veille Technologique : RFID</h3>
-                        <p>Analyse de la technologie d'identification par radiofréquence et ses enjeux de sécurité.</p>
-                        <button class="btn-primary" onclick="openModal('rfid')" style="margin-top:auto; width: 100%;">Consulter le PDF</button>
-                    </article>
-                </div>
+            <div class="skill-card">
+              <i class="devicon-javascript-plain colored"></i><span>JS</span>
             </div>
-        </section>
-
-        <section id="contact">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Contact</h2>
-                    <p>Une opportunité ? Une question ? Envoyez-moi un message !</p>
-                </div>
-                <form class="form" action="#" method="post">
-                    <div>
-                        <label for="email">Votre Email</label>
-                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
-                    </div>
-                    <div>
-                        <label for="message">Votre Message</label>
-                        <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">Envoyer le message</button>
-                </form>
+            <div class="skill-card">
+              <i class="devicon-python-plain colored"></i><span>Python</span>
             </div>
-        </section>
+            <div class="skill-card">
+              <i class="devicon-nodejs-plain colored"></i><span>NodeJS</span>
+            </div>
+            <div class="skill-card">
+              <i class="devicon-mongodb-plain colored"></i><span>MongoDB</span>
+            </div>
+            <div class="skill-card">
+              <i class="devicon-mysql-plain colored"></i><span>MySQL</span>
+            </div>
+            <div class="skill-card">
+              <i class="devicon-html5-plain colored"></i><span>HTML5</span>
+            </div>
+            <div class="skill-card">
+              <i class="devicon-css3-plain colored"></i><span>CSS3</span>
+            </div>
+            <div class="skill-card">
+              <i class="devicon-git-plain colored"></i><span>Git</span>
+            </div>
+            <div class="skill-card">
+              <i class="devicon-linux-plain"></i><span>Linux</span>
+            </div>
+          </div>
+        </div>
+        <div class="skills-bars">
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Développement Web (Architecture MVC)</span>
+              <span>65%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-level="65%"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Réseau & Cybersécurité</span>
+              <span>50%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-level="50%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projets" class="section-padding">
+        <div class="container">
+          <h2 class="section-title">Mes Projets</h2>
+          <div class="grid-projects">
+            <article class="project-card">
+              <div class="p-icon">
+                <i class="fa-solid fa-notes-medical"></i>
+              </div>
+              <h3>Projet GSB</h3>
+              <p>
+                Application de gestion de frais médicaux développée avec Angular
+                CLI.
+              </p>
+              <a
+                href="https://github.com/Youss-93"
+                target="_blank"
+                class="btn-link"
+                >GitHub →</a
+              >
+            </article>
+            <article class="project-card">
+              <div class="p-icon"><i class="fa-solid fa-car"></i></div>
+              <h3>Loc Auto</h3>
+              <p>
+                Système de location de véhicules structuré en
+                <strong>MVC</strong> avec gestion de base de données.
+              </p>
+              <a
+                href="https://github.com/Youss-93"
+                target="_blank"
+                class="btn-link"
+                >GitHub →</a
+              >
+            </article>
+            <article class="project-card">
+              <div class="p-icon"><i class="fa-solid fa-hand-fist"></i></div>
+              <h3>Muay Thaï</h3>
+              <p>
+                Site vitrine responsive présentant la culture et les techniques
+                de la boxe thaïlandaise.
+              </p>
+              <a
+                href="https://youss-93.github.io/ap-site-web/"
+                target="_blank"
+                class="btn-link"
+                >Voir le site →</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="veille" class="section-padding bg-light">
+        <div class="container">
+          <h2 class="section-title">Veille Technologique</h2>
+          <div class="veille-container">
+            <div class="veille-header">
+              <div class="veille-icon">
+                <i class="fa-solid fa-tower-broadcast"></i>
+              </div>
+              <h3>Sujet : La Technologie RFID</h3>
+              <div class="problematique-box">
+                <span class="label">MA PROBLÉMATIQUE</span>
+                <p>
+                  "Comment la technologie RFID améliore-t-elle la traçabilité et
+                  l’automatisation des systèmes, tout en posant des enjeux de
+                  sécurité et de protection des données ?"
+                </p>
+              </div>
+            </div>
+            <div class="articles-list">
+              <h4>
+                <i class="fa-solid fa-newspaper"></i> Articles sélectionnés
+              </h4>
+              <div class="article-item">
+                <div class="article-meta">01</div>
+                <div class="article-body">
+                  <a
+                    href="https://bigmedia.bpifrance.fr/nos-dossiers/10-cas-dapplication-de-liot-pour-les-entreprises-francaises"
+                    target="_blank"
+                    >L'apport du RFID dans l'automatisation industrielle</a
+                  >
+                  <p>
+                    Optimisation de la Supply Chain et réduction des erreurs
+                    humaines.
+                  </p>
+                </div>
+              </div>
+              <div class="article-item">
+                <div class="article-meta">02</div>
+                <div class="article-body">
+                  <a
+                    href="https://www.01net.com/actualites/arnaque-carte-sans-contact-virus-utilise-nfc-votre-smartphone-depouiller.html"
+                    target="_blank"
+                    >Failles de sécurité : Clonage et NFC</a
+                  >
+                  <p>
+                    Analyse des risques d'usurpation d'identité via le piratage
+                    sans contact.
+                  </p>
+                </div>
+              </div>
+              <div class="article-item">
+                <div class="article-meta">03</div>
+                <div class="article-body">
+                  <a
+                    href="https://www.service-public.pf/dgen/cnil-rfid-des-puces-aux-usages-multiples-et-aux-impacts-varies-en-termes-de-vie-privee/"
+                    target="_blank"
+                    >RFID et RGPD : Protection des données</a
+                  >
+                  <p>
+                    Les mesures imposées par la CNIL pour garantir la vie
+                    privée.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-padding">
+        <div class="container">
+          <h2 class="section-title">Me Contacter</h2>
+          <form class="contact-form">
+            <input type="email" placeholder="Votre Email" required />
+            <textarea
+              placeholder="Votre message..."
+              rows="5"
+              required
+            ></textarea>
+            <button type="submit" class="btn-primary">
+              Envoyer le message
+            </button>
+          </form>
+        </div>
+      </section>
+      <section id="examens" class="section-padding bg-light">
+        <div class="container">
+          <h2 class="section-title">Tableau de Synthèse & Stages</h2>
+          <div class="document-gallery">
+            <div
+              class="doc-card"
+              onclick="
+                openDocModal('./assets/CV_Stage_2eme_annee_Youssouf_TAPE.pdf')
+              "
+            >
+              <div class="doc-preview">
+                <img
+                  src="./assets/CV_Stage_2eme_annee_Youssouf_TAPE.pdf"
+                  alt="Aperçu CV"
+                />
+                <div class="overlay">
+                  <i class="fa-solid fa-expand"></i> Voir le CV
+                </div>
+              </div>
+              <h3>Curriculum Vitae</h3>
+            </div>
+
+            <div
+              class="doc-card"
+              onclick="openDocModal('./assets/Tableau_de_synthese_BTS_SIO_Youssouf_TAPE.pdf')"
+            >
+              <div class="doc-preview">
+                <img src="./assets/Tableau_de_synthese_BTS_SIO_Youssouf_TAPE.pdf" alt="Aperçu Tableau" />
+                <div class="overlay">
+                  <i class="fa-solid fa-expand"></i> Voir le Tableau
+                </div>
+              </div>
+              <h3>Tableau de Synthèse</h3>
+            </div>
+
+            <div
+              class="doc-card"
+              onclick="openDocModal('./assets/Rapport_Stage_1ere-annee_Youssouf-TAPE.pdf')"
+            >
+              <div class="doc-preview">
+                <img src="./assets/Rapport_Stage_1ere-annee_Youssouf-TAPE.pdf" alt="Aperçu Stage 1" />
+                <div class="overlay">
+                  <i class="fa-solid fa-expand"></i> Voir le Rapport
+                </div>
+              </div>
+              <h3>Stage 1ère Année</h3>
+            </div>
+
+            <div
+              class="doc-card"
+              onclick="openDocModal('./assets/Rapport_Stage_2eme-annee_Youssouf-TAPE.pdf')"
+            >
+              <div class="doc-preview">
+                <img src="./assets/Rapport_Stage_2eme-annee_Youssouf-TAPE.pdf" alt="Aperçu Stage 2" />
+                <div class="overlay">
+                  <i class="fa-solid fa-expand"></i> Voir le Rapport
+                </div>
+              </div>
+              <h3>Stage 2ème Année</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="universalModal" class="modal">
+        <div class="modal-content">
+          <span class="close-modal" onclick="closeDocModal()">&times;</span>
+          <div class="modal-body">
+            <iframe id="pdfViewer" src=""></iframe>
+          </div>
+          <div class="modal-footer">
+            <a id="modalDownloadBtn" href="" download class="btn-download">
+              <i class="fa-solid fa-download"></i> Télécharger le document
+            </a>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="grid" style="grid-template-columns: repeat(3, 1fr); align-items: center;">
-                <div><strong>Youssouf Tape</strong></div>
-                <div><a href="https://www.linkedin.com/in/youssouf-tape-8823072a5/" target="_blank" style="color: white">LinkedIn</a></div>
-                <div><p>© 2025 - Portfolio BTS SIO</p></div>
-            </div>
-        </div>
+    <footer class="footer">
+      <p>&copy; 2026 Youssouf Tape - Portfolio BTS SIO</p>
     </footer>
-
-    <div id="modal-overlay" class="modal-overlay" onclick="closeModal(event)">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <button class="modal-close" onclick="closeModal()">✕</button>
-            <div class="modal-body">
-                <div id="modal-document"></div>
-            </div>
-            <div class="modal-footer">
-                <a id="download-link" href="#" download class="download-button">⬇️ Télécharger le PDF</a>
-            </div>
-        </div>
-    </div>
-</body>
+  </body>
 </html>

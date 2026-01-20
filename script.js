@@ -1,30 +1,46 @@
-// Animation des barres de compétences
-window.addEventListener("scroll", () => {
-  const section = document.querySelector("#compétences");
-  const bars = document.querySelectorAll(".skill-progress");
+// Fonction pour ouvrir la visionneuse avec le bon PDF
+function openDocModal(cheminFichier) {
+  const modal = document.getElementById("universalModal");
+  const iframe = document.getElementById("pdfViewer");
+  const downloadBtn = document.getElementById("modalDownloadBtn");
 
-  if (window.scrollY + window.innerHeight > section.offsetTop) {
-    bars.forEach((bar) => {
-      bar.style.width = bar.getAttribute("data-level");
-    });
+  // On injecte le chemin du PDF dans l'iframe et dans le bouton download
+  iframe.src = cheminFichier + "#view=FitH";
+  downloadBtn.href = cheminFichier;
+
+  // On affiche la modale
+  modal.style.display = "block";
+  document.body.style.overflow = "hidden"; // Bloque le scroll du fond
+}
+
+// Fonction pour fermer la visionneuse
+function closeDocModal() {
+  const modal = document.getElementById("universalModal");
+  const iframe = document.getElementById("pdfViewer");
+
+  modal.style.display = "none";
+  iframe.src = ""; // Stop le chargement du PDF
+  document.body.style.overflow = "auto"; // Rend le scroll
+}
+
+// Fermer si on clique en dehors du cadre blanc
+window.onclick = function (event) {
+  const modal = document.getElementById("universalModal");
+  if (event.target == modal) {
+    closeDocModal();
   }
+};
+
+document.querySelectorAll(".navbar a").forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  });
 });
-
-// Gestion Modale
-function openModal(type) {
-  const modal = document.getElementById("modal-overlay");
-  const doc = document.getElementById("modal-document");
-  modal.classList.add("active");
-
-  if (type === "cv") {
-    doc.innerHTML =
-      '<iframe src="assets/CV_Stage_2eme_annee_Youssouf_TAPE.pdf" width="100%" height="500px"></iframe>';
-  } else {
-    doc.innerHTML =
-      '<iframe src="assets/Veille_Technologique_RFID_Youssouf.pdf" width="100%" height="500px"></iframe>';
-  }
-}
-
-function closeModal() {
-  document.getElementById("modal-overlay").classList.remove("active");
-}
