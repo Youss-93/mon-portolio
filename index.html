@@ -31,14 +31,20 @@
           </ul>
         </nav>
         <div class="socials">
-          <a href="https://github.com/Youss-93" target="_blank"
-            ><i class="fa-brands fa-github"></i
-          ></a>
+          <a
+            href="https://github.com/Youss-93"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
           <a
             href="https://www.linkedin.com/in/youssouf-tape-8823072a5/"
             target="_blank"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
         </div>
       </div>
     </header>
@@ -56,7 +62,6 @@
         </div>
       </section>
 
-    </main>
       <section id="a-propos" class="section-padding">
         <div class="container">
           <h2 class="section-title">Mon Parcours</h2>
@@ -149,25 +154,23 @@
               <i class="devicon-linux-plain"></i><span>Linux</span>
             </div>
           </div>
-        </div>
-        <div class="skills-bars">
-          <div class="skill-item">
-            <div class="skill-info">
-              <span>Développement Web (Architecture MVC)</span>
-              <span>65%</span>
+          <div class="skills-bars">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Développement Web (Architecture MVC)</span
+                ><span>50%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-level="50%"></div>
+              </div>
             </div>
-            <div class="skill-bar">
-              <div class="skill-progress" data-level="65%"></div>
-            </div>
-          </div>
-
-          <div class="skill-item">
-            <div class="skill-info">
-              <span>Réseau & Cybersécurité</span>
-              <span>50%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" data-level="50%"></div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Réseau & Cybersécurité</span><span>50%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-level="50%"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -187,7 +190,7 @@
                 CLI.
               </p>
               <a
-                href="https://github.com/Youss-93"
+                href="https://github.com/dianacyber/gsb_medecin"
                 target="_blank"
                 class="btn-link"
                 >GitHub →</a
@@ -201,7 +204,7 @@
                 <strong>MVC</strong> avec gestion de base de données.
               </p>
               <a
-                href="https://github.com/Youss-93"
+                href="https://github.com/Youss-93/ap-mvc_locauto"
                 target="_blank"
                 class="btn-link"
                 >GitHub →</a
@@ -251,9 +254,9 @@
                 <div class="article-meta">01</div>
                 <div class="article-body">
                   <a
-                    href="https://bigmedia.bpifrance.fr/nos-dossiers/10-cas-dapplication-de-liot-pour-les-entreprises-francaises"
+                    href="https://vrautomation.fr/rfid-industriel-tracabilite-et-identification-sans-contact/"
                     target="_blank"
-                    >L'apport du RFID dans l'automatisation industrielle</a
+                    >L'apport du RFID dans le secteur industrielle</a
                   >
                   <p>
                     Optimisation de la Supply Chain et réduction des erreurs
@@ -279,12 +282,12 @@
                 <div class="article-meta">03</div>
                 <div class="article-body">
                   <a
-                    href="https://www.service-public.pf/dgen/cnil-rfid-des-puces-aux-usages-multiples-et-aux-impacts-varies-en-termes-de-vie-privee/"
+                    href="https://surfshark.com/fr/blog/blocage-rfid"
                     target="_blank"
-                    >RFID et RGPD : Protection des données</a
+                    >RFID : Protection des données</a
                   >
                   <p>
-                    Les mesures imposées par la CNIL pour garantir la vie
+                    Les mesures de sécurité pour garantir la vie
                     privée.
                   </p>
                 </div>
@@ -310,54 +313,85 @@
           </form>
         </div>
       </section>
+
       <section id="examens" class="section-padding bg-light">
         <div class="container">
           <h2 class="section-title">Tableau de Synthèse & Stages</h2>
           <div class="document-gallery">
-            <div class="document-gallery">
-  <div class="doc-card" onclick="openDocModal('./assets/CV_Stage_2eme_annee_Youssouf_TAPE.pdf')">
-    <div class="doc-preview">
-      <i class="fa-solid fa-file-pdf document-icon"></i>
-      <div class="overlay"><i class="fa-solid fa-expand"></i> Voir le CV</div>
-    </div>
-    <h3>Curriculum Vitae</h3>
-  </div>
-
-  <div class="doc-card" onclick="openDocModal('./assets/Tableau_de_synthese_BTS_SIO_Youssouf_TAPE.pdf')">
-    <div class="doc-preview">
-      <i class="fa-solid fa-table document-icon"></i>
-      <div class="overlay"><i class="fa-solid fa-expand"></i> Voir le Tableau</div>
-    </div>
-    <h3>Tableau de Synthèse</h3>
-  </div>
-
-  <div class="doc-card" onclick="openDocModal('./assets/Rapport_Stage_1ere-annee_Youssouf-TAPE.pdf')">
-    <div class="doc-preview">
-      <i class="fa-solid fa-briefcase document-icon"></i>
-      <div class="overlay"><i class="fa-solid fa-expand"></i> Voir le Rapport</div>
-    </div>
-    <h3>Stage 1ère Année</h3>
-  </div>
-
-  <div class="doc-card" onclick="openDocModal('./assets/Rapport_Stage_2eme-annee_Youssouf-TAPE.pdf')">
-    <div class="doc-preview">
-      <i class="fa-solid fa-briefcase document-icon"></i>
-      <div class="overlay"><i class="fa-solid fa-expand"></i> Voir le Rapport</div>
-    </div>
-    <h3>Stage 2ème Année</h3>
-  </div>
-</div>
-        </div>  
+            <div
+              class="doc-card"
+              onclick="
+                openDocModal('./assets/CV_Stage_2eme_annee_Youssouf_TAPE.pdf')
+              "
+            >
+              <div class="doc-preview">
+                <i class="fa-solid fa-file-pdf document-icon"></i>
+                <div class="overlay">
+                  <i class="fa-solid fa-expand"></i> Voir le CV
+                </div>
+              </div>
+              <h3>Curriculum Vitae</h3>
+            </div>
+            <div
+              class="doc-card"
+              onclick="
+                openDocModal(
+                  './assets/Tableau_de_synthese_BTS_SIO_Youssouf_TAPE.pdf',
+                )
+              "
+            >
+              <div class="doc-preview">
+                <i class="fa-solid fa-table document-icon"></i>
+                <div class="overlay">
+                  <i class="fa-solid fa-expand"></i> Voir le Tableau
+                </div>
+              </div>
+              <h3>Tableau de Synthèse</h3>
+            </div>
+            <div
+              class="doc-card"
+              onclick="
+                openDocModal(
+                  './assets/Rapport_Stage_1ere-annee_Youssouf-TAPE.pdf',
+                )
+              "
+            >
+              <div class="doc-preview">
+                <i class="fa-solid fa-briefcase document-icon"></i>
+                <div class="overlay">
+                  <i class="fa-solid fa-expand"></i> Voir le Rapport
+                </div>
+              </div>
+              <h3>Stage 1ère Année</h3>
+            </div>
+            <div
+              class="doc-card"
+              onclick="
+                openDocModal(
+                  './assets/Rapport_Stage_2eme-annee_Youssouf-TAPE.pdf',
+                )
+              "
+            >
+              <div class="doc-preview">
+                <i class="fa-solid fa-briefcase document-icon"></i>
+                <div class="overlay">
+                  <i class="fa-solid fa-expand"></i> Voir le Rapport
+                </div>
+              </div>
+              <h3>Stage 2ème Année</h3>
+            </div>
+          </div>
+        </div>
       </section>
 
       <div id="universalModal" class="modal">
         <div class="modal-content">
           <span class="close-modal" onclick="closeDocModal()">&times;</span>
           <div class="modal-body">
-            <iframe id="pdfViewer" src=""></iframe>
+            <iframe id="pdfViewer" title="Visionneuse PDF"></iframe>
           </div>
           <div class="modal-footer">
-            <a id="modalDownloadBtn" href="" download class="btn-download">
+            <a id="modalDownloadBtn" href="#" download class="btn-download">
               <i class="fa-solid fa-download"></i> Télécharger le document
             </a>
           </div>
@@ -366,7 +400,9 @@
     </main>
 
     <footer class="footer">
-      <p>&copy; 2026 Youssouf Tape - Portfolio BTS SIO</p>
+      <div class="container">
+        <p>&copy; 2026 Youssouf Tape - Portfolio BTS SIO</p>
+      </div>
     </footer>
   </body>
 </html>

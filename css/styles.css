@@ -453,67 +453,160 @@ body {
   opacity: 1;
 }
 
-/* LA MODALE EN GRAND */
+/* --- SECTION EXAMENS --- */
+
+/* Conteneur principal de la galerie */
+.document-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Style de la carte individuelle */
+.doc-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+/* Effet au survol de la carte */
+.doc-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.15);
+  border-color: #2563eb;
+}
+
+/* Zone d'aperçu (icône et overlay) */
+.doc-preview {
+  background: #f8fafc;
+  height: 180px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* Style des icônes de documents */
+.document-icon {
+  font-size: 4rem;
+  color: #2563eb; /* Ton bleu principal */
+  transition: transform 0.3s ease;
+}
+
+.doc-card:hover .document-icon {
+  transform: scale(1.1);
+}
+
+/* Overlay "Voir le document" qui apparaît au survol */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(37, 99, 235, 0.9); /* Bleu semi-transparent */
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.doc-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Titres des documents */
+.doc-card h3 {
+  font-size: 1.2rem;
+  color: #1e293b;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* --- STYLE DE LA MODALE PDF --- */
+
 .modal {
-  display: none;
+  display: none; 
   position: fixed;
-  z-index: 10000;
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
 }
 
 .modal-content {
-  background: white;
-  margin: 2vh auto;
-  width: 95%;
-  height: 96vh;
-  border-radius: 10px;
+  background-color: #ffffff;
+  margin: 2% auto;
+  width: 90%;
+  max-width: 1000px;
+  height: 90vh;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-}
-
-.modal-body {
-  flex: 1;
-  background: #525659;
-}
-.modal-body iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-.modal-footer {
-  padding: 15px;
-  text-align: center;
-  background: #f8fafc;
-  border-top: 1px solid #ddd;
+  position: relative;
 }
 
 .close-modal {
   position: absolute;
   top: 15px;
   right: 25px;
-  font-size: 40px;
-  color: #333;
+  font-size: 35px;
+  font-weight: bold;
+  color: #1e293b;
   cursor: pointer;
-  z-index: 10001;
-}
-.doc-preview {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f1f5f9; /* Gris très clair */
-  height: 200px;
-  border-radius: 8px;
-  position: relative;
-  overflow: hidden;
+  z-index: 10;
 }
 
-.document-icon {
-  font-size: 4rem;
-  color: #2563eb; /* Ton bleu primaire */
+.modal-body {
+  flex: 1;
+  width: 100%;
+}
+
+#pdfViewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.modal-footer {
+  padding: 15px 25px;
+  background: #f8fafc;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #e2e8f0;
+}
+
+.btn-download {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s ease;
+}
+
+.btn-download:hover {
+  background-color: #1d4ed8;
 }
